@@ -1,45 +1,44 @@
-import Link from "next/link";
 import Image from "next/image";
 
 export default function Hero() {
+
   return (
-    <section className="mt-8 h-[290px] bg-[#15181e] rounded-xl border border-[#20242c] px-12 flex items-center justify-between">
 
-      <div className="w-[520px]">
+    <section className="mt-10 w-full h-[300px] bg-[#15181e] rounded-xl border border-gray-800 px-10 flex items-center justify-between overflow-hidden">
 
-        <p className="text-[#ccff00] text-[10px] font-bold mb-4">
+      <div className="w-[55%]">
+
+        <p className="text-[#ccff00] text-xs font-bold tracking-wider mb-4">
           WORKOUT LIBRARY
         </p>
 
-        <h1 className="text-white text-[42px] font-black leading-[1]">
+        <h1 className="text-white text-[42px] font-black leading-[1.05]">
           TRAIN WITH INTENT. LOG
           <br />
           EVERY SET.
         </h1>
 
-        <p className="text-gray-400 text-xs mt-5 w-[400px]">
+        <p className="text-gray-400 text-sm mt-4 max-w-[420px] leading-5">
           FitLog is a dark, no-nonsense gym companion: pick a lift,
           lock it into today's plan, and watch the week's work add up.
         </p>
 
-
-        <Link href="#library">
-          <button className="mt-5 bg-[#ccff00] text-black text-xs font-bold px-5 py-2">
-            BROWSE WORKOUTS
-          </button>
-        </Link>
-
+        <button className="mt-5 bg-[#ccff00] text-black px-5 py-3 rounded text-xs font-bold">
+          BROWSE WORKOUTS
+        </button>
+      </div>
+      <div className="w-[45%] flex justify-end">
+        <Image
+          src="/banner.png"
+          width={240}
+          height={240}
+          alt="banner"
+          className="object-contain"
+        />
       </div>
 
-
-      <Image
-        src="/banner.png"
-        width={240}
-        height={240}
-        alt="banner"
-      />
-
-
     </section>
+
   );
+
 }
